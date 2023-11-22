@@ -148,9 +148,12 @@ if grep -q "ArcoLinux" /etc/os-release; then
 	echo
 	echo "Installing personal settings of variety"
 	[ -d $HOME"/.config/variety" ] || mkdir -p $HOME"/.config/variety"
+	[ -d $HOME"/.config/variety/Favorites" ] || mkdir -p $HOME"/.config/variety/Favorites"
 	cp $installed_dir/settings/variety/variety.conf ~/.config/variety/
+	cp $installed_dir/settings/variety/variety/Favorites/*.* ~/.config/variety/Favorites/
 	[ -d /etc/skel/.config/variety ] || sudo mkdir -p /etc/skel/.config/variety
 	sudo cp $installed_dir/settings/variety/variety.conf /etc/skel/.config/variety/
+	sudo cp $installed_dir/settings/variety/Favorites/*.* /etc/skel/.config/variety/Favorites/
 	echo
 fi
 
