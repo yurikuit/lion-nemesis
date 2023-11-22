@@ -73,7 +73,7 @@ sudo pacman -S --noconfirm --needed archiso
 sudo pacman -S --noconfirm --needed avahi
 sudo pacman -S --noconfirm --needed awesome-terminal-fonts
 #sudo pacman -S --noconfirm --needed ayu-theme
-#sudo pacman -S --noconfirm --needed baobab
+sudo pacman -S --noconfirm --needed baobab
 #sudo pacman -S --noconfirm --needed base16-alacritty-git
 sudo pacman -S --noconfirm --needed bash-completion
 #sudo pacman -S --noconfirm --needed bat
@@ -90,7 +90,7 @@ if [ ! -f /usr/bin/duf ]; then
   sudo pacman -S --noconfirm --needed duf
 fi
 #sudo pacman -S --noconfirm --needed evince
-#sudo pacman -S --noconfirm --needed expac
+sudo pacman -S --noconfirm --needed expac
 sudo pacman -S --noconfirm --needed feh
 sudo pacman -S --noconfirm --needed file-roller
 #sudo pacman -S --noconfirm --needed firefox
@@ -99,10 +99,10 @@ sudo pacman -S --noconfirm --needed flameshot-git
 #sudo pacman -S --noconfirm --needed fluent-icon-theme-git
 sudo pacman -S --noconfirm --needed font-manager
 sudo pacman -S --noconfirm --needed galculator
-sudo pacman -S --noconfirm --needed gimp
+#sudo pacman -S --noconfirm --needed gimp
 sudo pacman -S --noconfirm --needed git
-sudo pacman -S --noconfirm --needed gitahead-bin
-sudo pacman -S --noconfirm --needed gitfiend
+#sudo pacman -S --noconfirm --needed gitahead-bin
+#sudo pacman -S --noconfirm --needed gitfiend
 sudo pacman -S --noconfirm --needed gnome-disk-utility
 sudo pacman -S --noconfirm --needed gparted
 #sudo pacman -S --noconfirm --needed grub-customizer
@@ -126,13 +126,13 @@ sudo pacman -S --noconfirm --needed man-pages
 sudo pacman -S --noconfirm --needed mkinitcpio-firmware
 sudo pacman -S --noconfirm --needed mlocate
 sudo pacman -S --noconfirm --needed meld
-sudo pacman -S --noconfirm --needed mintstick-git
-sudo pacman -S --noconfirm --needed most
+#sudo pacman -S --noconfirm --needed mintstick-git
+#sudo pacman -S --noconfirm --needed most
 sudo pacman -S --noconfirm --needed neofetch
 sudo pacman -S --noconfirm --needed network-manager-applet
 sudo pacman -S --noconfirm --needed networkmanager-openvpn
 sudo pacman -S --noconfirm --needed nitrogen
-sudo pacman -S --noconfirm --needed nomacs
+#sudo pacman -S --noconfirm --needed nomacs
 sudo pacman -S --noconfirm --needed noto-fonts
 sudo pacman -S --noconfirm --needed ntp
 sudo pacman -S --noconfirm --needed nss-mdns
@@ -183,14 +183,14 @@ sudo pacman -S --noconfirm --needed variety
 sudo pacman -S --noconfirm --needed vlc
 sudo pacman -S --noconfirm --needed wd719x-firmware
 sudo pacman -S --noconfirm --needed wget
-sudo pacman -S --noconfirm --needed wttr
+#sudo pacman -S --noconfirm --needed wttr
 sudo pacman -S --noconfirm --needed xcolor
 sudo pacman -S --noconfirm --needed xdg-user-dirs
 sudo pacman -S --noconfirm --needed xorg-xkill
 sudo pacman -S --noconfirm --needed yay-bin
-#sudo pacman -S --noconfirm --needed zsh
-#sudo pacman -S --noconfirm --needed zsh-completions
-#sudo pacman -S --noconfirm --needed zsh-syntax-highlighting
+sudo pacman -S --noconfirm --needed zsh
+sudo pacman -S --noconfirm --needed zsh-completions
+sudo pacman -S --noconfirm --needed zsh-syntax-highlighting
 sudo systemctl enable avahi-daemon.service
 sudo systemctl enable ntpd.service
 

@@ -68,8 +68,7 @@ echo
 
 
 list=(
-edu-leftwm-git
-leftwm-dev-git
+leftwm-git
 leftwm-theme-git
 lxappearance
 picom
@@ -104,14 +103,14 @@ if [ -f /usr/share/xsessions/leftwm.desktop ]; then
     tput sgr0
     echo
 
-    #cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
-    #cp -arf /etc/skel/.config/leftwm $HOME/.config
+    cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+    cp -arf /etc/skel/.config/leftwm $HOME/.config
 
-    #sh ~/.config/leftwm/scripts/install-all-arcolinux-themes.sh
-    #sh ~/.config/leftwm/scripts/install-all-arcolinux-community-themes.sh
+    sh ~/.config/leftwm/scripts/install-all-arcolinux-themes.sh
+    sh ~/.config/leftwm/scripts/install-all-arcolinux-community-themes.sh
 
-    #leftwm-theme update
-    #leftwm-theme apply db-nemesis
+    leftwm-theme update
+    leftwm-theme apply db-nemesis
 
 fi
 

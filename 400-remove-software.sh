@@ -52,6 +52,8 @@ sudo pacman -R --noconfirm xfce4-artwork
 sudo rm -rf /usr/share/backgrounds/xfce
 sudo pacman -Rs broadcom-wl-dkms --noconfirm
 sudo pacman -Rs rtl8821cu-morrownr-dkms-git --noconfirm
+sudo pacman -R --noconfirm xfburn
+sudo pacman -Rs --noconfirm vim vim-runtime
 
 sudo pacman -R --noconfirm adobe-source-han-sans-cn-fonts
 sudo pacman -R --noconfirm adobe-source-han-sans-jp-fonts
