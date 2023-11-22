@@ -80,6 +80,7 @@ sudo pacman -S --noconfirm --needed bash-completion
 sudo pacman -S --noconfirm --needed bibata-cursor-theme-bin
 #sudo pacman -S --noconfirm --needed catfish
 #sudo pacman -S --noconfirm --needed chromium
+sudo pacman -S --noconfirm --needed google-chrome
 sudo pacman -S --noconfirm --needed cpuid
 sudo pacman -S --noconfirm --needed curl
 sudo pacman -S --noconfirm --needed dconf-editor
@@ -137,7 +138,7 @@ sudo pacman -S --noconfirm --needed noto-fonts
 sudo pacman -S --noconfirm --needed ntp
 sudo pacman -S --noconfirm --needed nss-mdns
 sudo pacman -S --noconfirm --needed numlockx
-#sudo pacman -S --noconfirm --needed oh-my-zsh-git
+sudo pacman -S --noconfirm --needed oh-my-zsh-git
 sudo pacman -S --noconfirm --needed openresolv
 sudo pacman -S --noconfirm --needed paru-bin
 sudo pacman -S --noconfirm --needed pavucontrol
@@ -176,6 +177,7 @@ sudo pacman -S --noconfirm --needed ttf-roboto-mono
 sudo pacman -S --noconfirm --needed ttf-ubuntu-font-family
 sudo pacman -S --noconfirm --needed upd72020x-fw
 sudo pacman -S --noconfirm --needed variety
+sudo pacman -S --noconfirm --needed vim vim-runtime
 #sudo pacman -S --noconfirm --needed visual-studio-code-bin
 #sudo pacman -S --noconfirm --needed vivaldi
 #sudo pacman -S --noconfirm --needed vivaldi-ffmpeg-codecs
@@ -194,10 +196,12 @@ sudo pacman -S --noconfirm --needed zsh-syntax-highlighting
 sudo systemctl enable avahi-daemon.service
 sudo systemctl enable ntpd.service
 
-#sudo pacman -S --noconfirm --needed rxvt-unicode
-#sudo pacman -S --noconfirm --needed urxvt-fullscreen
-#sudo pacman -S --noconfirm --needed urxvt-perls
-#sudo pacman -S --noconfirm --needed urxvt-resize-font-git
+sudo pacman -S --noconfirm --needed flat-remix-git
+sudo pacman -S --noconfirm --needed fluent-gtk-theme
+sudo pacman -S --noconfirm --needed rxvt-unicode
+sudo pacman -S --noconfirm --needed urxvt-fullscreen
+sudo pacman -S --noconfirm --needed urxvt-perls
+sudo pacman -S --noconfirm --needed urxvt-resize-font-git
 
 sudo pacman -S --noconfirm --needed gzip
 sudo pacman -S --noconfirm --needed p7zip

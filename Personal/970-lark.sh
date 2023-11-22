@@ -168,12 +168,12 @@ if [ -f /usr/local/bin/get-nemesis-on-ariser ]; then
 	sudo sed -i "s/$FIND/$REPLACE/g" /etc/systemd/journald.conf
 
 	echo
-	echo "ArchLinux Logout - beauty icons"
+	echo "ArchLinux Logout - icons"
 	echo
 
 	[ -d $HOME"/.config/archlinux-logout/" ] || mkdir -p $HOME"/.config/archlinux-logout"
-	cp  $installed_dir/settings/archlinux-logout/archlinux-logout-handy.conf $HOME/.config/archlinux-logout/archlinux-logout.conf
-	sudo cp  $installed_dir/settings/archlinux-logout/archlinux-logout-handy.conf /etc/archlinux-logout.conf
+	cp  $installed_dir/settings/archlinux-logout/archlinux-logout-breeze-blur.conf $HOME/.config/archlinux-logout/archlinux-logout.conf
+	sudo cp  $installed_dir/settings/archlinux-logout/archlinux-logout-breeze-blur.conf /etc/archlinux-logout.conf
 	echo
 
 	tput setaf 6
