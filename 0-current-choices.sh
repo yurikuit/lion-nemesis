@@ -98,29 +98,29 @@ echo
 installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 cd $installed_dir/Personal
 
-#sh 900-* ###tijdlijk uitgeschakeld
+sh 900-* 
 sh 910-*
-#sh 920-* ###tijdlijk uitgeschakeld
+sh 920-*
 #sh 930-* ###tijdlijk uitgeschakeld
 sh 940-*
-#sh 950-*
+#sh 950-* ###tijdlijk uitgeschakeld
 
 sh 960-*
 
 sh 970-all*
 
-sh 970-alci*
-sh 970-archman*
-sh 970-archcraft*
-sh 970-arco*
+#sh 970-alci*
+#sh 970-archman*
+#sh 970-archcraft*
+#sh 970-arco*
 sh 970-ariser*
 sh 970-lark*
-sh 970-carli*
-sh 970-eos*
-sh 970-garuda*
-sh 970-sierra*
-sh 970-biglinux*
-sh 970-rebornos*
+#sh 970-carli*
+#sh 970-eos*
+#sh 970-garuda*
+#sh 970-sierra*
+#sh 970-biglinux*
+#sh 970-rebornos*
 
 #has to be last - they are all Arch
 sh 970-arch.sh

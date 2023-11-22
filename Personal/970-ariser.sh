@@ -59,21 +59,6 @@ if [ -f /usr/local/bin/get-nemesis-on-ariser ]; then
 	sudo rm -f /etc/skel/.zshrc
 
 	echo
-	echo "Installing edu packages"
-	sudo pacman -S --noconfirm  edu-skel-git
-  	sudo pacman -S --noconfirm  edu-xfce-git
-  	sudo pacman -S --noconfirm  edu-system-git
-	echo
-
-	echo
-	echo "Change gtk-3.0 config"
-	echo
-	FIND="Sardi-Arc"
-	REPLACE="a-candy-beauty-icon-theme"
-	sed -i "s/$FIND/$REPLACE/g" $HOME/.config/gtk-3.0/settings.ini
-	sudo sed -i "s/$FIND/$REPLACE/g" /etc/skel/.config/gtk-3.0/settings.ini
-
-	echo
 	echo "Setting environment variables"
 	echo
 	if [ -f /etc/environment ]; then
@@ -187,8 +172,8 @@ if [ -f /usr/local/bin/get-nemesis-on-ariser ]; then
 	echo
 
 	[ -d $HOME"/.config/archlinux-logout/" ] || mkdir -p $HOME"/.config/archlinux-logout"
-	cp  $installed_dir/settings/archlinux-logout/archlinux-logout-beauty.conf $HOME/.config/archlinux-logout/archlinux-logout.conf
-	sudo cp  $installed_dir/settings/archlinux-logout/archlinux-logout-beauty.conf /etc/archlinux-logout.conf
+	cp  $installed_dir/settings/archlinux-logout/archlinux-logout-handy.conf $HOME/.config/archlinux-logout/archlinux-logout.conf
+	sudo cp  $installed_dir/settings/archlinux-logout/archlinux-logout-handy.conf /etc/archlinux-logout.conf
 	echo
 
 	tput setaf 6

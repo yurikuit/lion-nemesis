@@ -11,8 +11,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-setxkbmap be
-
 nm-applet &
 pamac-tray &
 variety &
@@ -23,7 +21,7 @@ blueberry-tray &
 picom -b  --config ~/.config/arco-chadwm/picom/picom.conf &
 numlockx on
 volumeicon &
-#insync start &
+insync start &
 #spotify &
 #ckb-next -b &
 #discord &
@@ -31,12 +29,12 @@ volumeicon &
 
 sxhkd -c ~/.config/arco-chadwm/sxhkd/sxhkdrc &
 
-feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-#feh --randomize --bg-fill /home/erik/Insync/Apps/Wallhaven/*
+#feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+feh --randomize --bg-fill /home/yuri/Insync/IT/SOFTWARE/LINUX/ArchLinux/Wallhaven/*
 #feh --bg-fill ~/.config/arco-chadwm/wallpaper/chadwm.jpg &
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 
-sh /home/erik/.config/arco-chadwm/scripts/bar.sh &
+sh /home/yuri/.config/arco-chadwm/scripts/bar.sh &
 
 exec chadwm  > ~/.xsession-errors 2>&1
 

@@ -88,40 +88,6 @@ echo
 #uncommenting so that we see the bluetooth icon in our toolbars
 gsettings set org.blueberry use-symbolic-icons false
 
-echo
-echo "VirtualBox check - copy/paste template or not"
-echo
-
-result=$(systemd-detect-virt)
-if [ $result = "none" ];then
-
-	echo
-	tput setaf 2
-	echo "################################################################"
-	echo "####### Copy paste virtual box template"
-	echo "################################################################"
-	tput sgr0
-	echo	
-
-	[ -d $HOME"/VirtualBox VMs" ] || mkdir -p $HOME"/VirtualBox VMs"
-	sudo cp -rf settings/virtualbox-template/* ~/VirtualBox\ VMs/
-	cd ~/VirtualBox\ VMs/
-	tar -xzf template.tar.gz
-	rm -f template.tar.gz	
-
-else
-
-	echo
-	tput setaf 3
-	echo "################################################################"
-	echo "### You are on a virtual machine - skipping VirtualBox"
-	echo "### Template not copied over"
-	echo "################################################################"
-	tput sgr0
-	echo
-
-fi
-
 if grep -q "ArcoLinux" /etc/os-release; then
 
 	echo
@@ -138,13 +104,8 @@ if grep -q "ArcoLinux" /etc/os-release; then
 	cp $installed_dir/settings/shell-personal/.zshrc ~/.zshrc
 	sudo cp -f $installed_dir/settings/shell-personal/.zshrc /etc/skel/.zshrc
 	cp $installed_dir/settings/shell-personal/.zshrc-personal ~/.zshrc-personal
-	cp $installed_dir/settings/fish/alias.fish ~/.config/fish/alias.fish
 	echo
 
-	echo "Installing screenkey for teaching"
-	echo
-	cp $installed_dir/settings/screenkey/screenkey.json ~/.config/
-	echo
 	echo "Adding personal looks to /personal"
 	echo
 	sudo cp -arf $installed_dir/settings/personal-folder/personal-iso/* /personal
