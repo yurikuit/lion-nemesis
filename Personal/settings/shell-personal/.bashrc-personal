@@ -16,4 +16,4 @@ alias personal9='cp -Rf /personal/9/* ~'
 
 alias cpuu="gcc -c -Q -march=native --help=target | grep march | awk '{print $2}' | head -1"
 
-alias random="nitrogen --random /home/yuri/Insync/IT/SOFTWARE/LINUX/ArchLinux/Wallhaven --set-zoom-fill"
+alias random="nitrogen --random /home/yuri/Insync/yurikuit@gmail.com/Google Drive/IT/SOFTWARE/LINUX/ArchLinux/Wallhaven --set-zoom-fill"
