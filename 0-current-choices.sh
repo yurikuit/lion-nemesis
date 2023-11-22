@@ -46,6 +46,20 @@ if [[ "$response" == [yY] ]]; then
     touch /tmp/install-chadwm
 fi
 
+echo
+tput setaf 3
+echo "################################################################"
+echo "Do you want to install Workstation Software on your system?"
+echo "Answer with Y/y or N/n"
+echo "################################################################"
+tput sgr0
+echo
+
+read response
+
+if [[ "$response" == [yY] ]]; then
+    touch /tmp/install-workstation
+fi
 
 echo
 echo "Pacman parallel downloads if needed -for ArcoLinux"
@@ -79,6 +93,7 @@ sh 150-install-chadwm*
 sh 160-install-bluetooth*
 sh 170-install-cups*
 #sh 180-install-test-software*
+sh 190-install-workstation*
 
 sh 200-software-AUR-repo*
 #sh 300-sardi-extra-icons-AUR-repo*
