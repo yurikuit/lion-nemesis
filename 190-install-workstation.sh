@@ -79,6 +79,7 @@ func_install_workstation() {
     makemkv
     mediainfo
     spotify
+    lastpass
     )
 
     count=0
