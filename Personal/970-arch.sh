@@ -2,19 +2,6 @@
 #set -e
 ##################################################################################################################
 # Author    : Erik Dubois
-# Website   : https://www.erikdubois.be
-# Website   : https://www.alci.online
-# Website   : https://www.ariser.eu
-# Website   : https://www.arcolinux.info
-# Website   : https://www.arcolinux.com
-# Website   : https://www.arcolinuxd.com
-# Website   : https://www.arcolinuxb.com
-# Website   : https://www.arcolinuxiso.com
-# Website   : https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
 ##################################################################################################################
 #tput setaf 0 = black
 #tput setaf 1 = red
@@ -42,12 +29,6 @@ if [ ! -f /etc/dev-rel ] ; then
 		echo "################################################################"
 		tput sgr0
 		echo
-
-		echo
-		echo "Pacman parallel downloads	"
-		FIND="#ParallelDownloads = 5"
-		REPLACE="ParallelDownloads = 10"
-		sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
 
 		echo
 		echo "Bootloader time to 1 second"
@@ -91,16 +72,6 @@ if [ ! -f /etc/dev-rel ] ; then
 			echo
 			cp $installed_dir/settings/archlinux/whiskermenu-7.rc ~/.config/xfce4/panel/whiskermenu-7.rc
 			sudo cp $installed_dir/settings/archlinux/whiskermenu-7.rc /etc/skel/.config/xfce4/panel/whiskermenu-7.rc
-
-			FIND="Arc-Dark"
-			REPLACE="Arc-Dawn-Dark"
-			sed -i "s/$FIND/$REPLACE/g" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-			sudo sed -i "s/$FIND/$REPLACE/g" /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-
-			FIND="Sardi-Arc"
-			REPLACE="a-candy-beauty-icon-theme"
-			sed -i "s/$FIND/$REPLACE/g" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-			sudo sed -i "s/$FIND/$REPLACE/g" /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 
 		fi
 

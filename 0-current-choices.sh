@@ -108,11 +108,11 @@ sh 940-*
 sh 960-*
 
 sh 970-all*
-#sh 970-arco*
+sh 970-arco*
 sh 970-ariser*
 sh 970-lark*
 #has to be last - they are all Arch
-sh 970-arch.sh
+sh 970-arch*
 
 sh 999-skel*
 

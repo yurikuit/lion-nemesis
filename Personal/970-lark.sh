@@ -2,29 +2,6 @@
 #set -e
 ##################################################################################################################
 # Author    : Erik Dubois
-# Website   : https://www.erikdubois.be
-# Website   : https://www.alci.online
-# Website   : https://www.ariser.eu
-# Website   : https://www.arcolinux.info
-# Website   : https://www.arcolinux.com
-# Website   : https://www.arcolinuxd.com
-# Website   : https://www.arcolinuxb.com
-# Website   : https://www.arcolinuxiso.com
-# Website   : https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
-##################################################################################################################
-#tput setaf 0 = black
-#tput setaf 1 = red
-#tput setaf 2 = green
-#tput setaf 3 = yellow
-#tput setaf 4 = dark blue
-#tput setaf 5 = purple
-#tput setaf 6 = cyan
-#tput setaf 7 = gray
-#tput setaf 8 = light blue
 ##################################################################################################################
 
 installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
@@ -50,13 +27,6 @@ if [ -f /usr/local/bin/get-nemesis-on-ariser ]; then
 	echo "################################################################"
 	tput sgr0
 	echo
-
-	sudo rm -f /etc/skel/.config/Kvantum/kvantum.kvconfig
-	sudo rm -f /etc/skel/.config/gtk-3.0/settings.ini
-	sudo rm -f /etc/skel/.config/variety/variety.conf
-	sudo rm -f /etc/skel/.config/Thunar/uca.xml
-	sudo rm -r /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-	sudo rm -f /etc/skel/.zshrc
 
 	echo
 	echo "Setting environment variables"
@@ -141,20 +111,6 @@ if [ -f /usr/local/bin/get-nemesis-on-ariser ]; then
 		cp $installed_dir/settings/ariser/whiskermenu-7.rc ~/.config/xfce4/panel/whiskermenu-7.rc
 		[ -d /etc/skel/.config/xfce4/panel ] || sudo mkdir -p /etc/skel/.config/xfce4/panel
 		sudo cp $installed_dir/settings/ariser/whiskermenu-7.rc /etc/skel/.config/xfce4/panel/whiskermenu-7.rc
-
-		echo
-		echo "Changing the icons and theme"
-		echo
-
-		FIND="Arc-Dark"
-		REPLACE="Arc-Dawn-Dark"
-		sed -i "s/$FIND/$REPLACE/g" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-		sudo sed -i "s/$FIND/$REPLACE/g" /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-
-		FIND="Sardi-Arc"
-		REPLACE="a-candy-beauty-icon-theme"
-		sed -i "s/$FIND/$REPLACE/g" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-		sudo sed -i "s/$FIND/$REPLACE/g" /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 
 	fi
 
