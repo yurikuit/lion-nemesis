@@ -2,19 +2,6 @@
 #set -e
 ##################################################################################################################
 # Author    : Erik Dubois
-# Website   : https://www.erikdubois.be
-# Website   : https://www.alci.online
-# Website   : https://www.ariser.eu
-# Website   : https://www.arcolinux.info
-# Website   : https://www.arcolinux.com
-# Website   : https://www.arcolinuxd.com
-# Website   : https://www.arcolinuxb.com
-# Website   : https://www.arcolinuxiso.com
-# Website   : https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
 ##################################################################################################################
 #tput setaf 0 = black
 #tput setaf 1 = red
@@ -69,7 +56,13 @@ sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
 
 echo
 echo "Pacman parallel downloads if needed - for Arch Linux"
-FIND="#ParallelDownloads = 5"
+FIND="#ParallelDownloads ="
+REPLACE="ParallelDownloads ="
+sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
+
+echo
+echo "Pacman parallel downloads if needed - for Arch Linux"
+FIND="ParallelDownloads = 5"
 REPLACE="ParallelDownloads = 20"
 sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
 
@@ -85,20 +78,15 @@ sudo pacman -Sy
 
 sh 400-remove-software*
 
-#sh 100-install-nemesis-software*
 sh 110-install-arcolinux-software*
 sh 120-install-core-software*
 #sh 130-install-leftwm*
 sh 150-install-chadwm*
 sh 160-install-bluetooth*
 sh 170-install-cups*
-#sh 180-install-test-software*
 sh 190-install-workstation*
 
 sh 200-software-AUR-repo*
-#sh 300-sardi-extra-icons-AUR-repo*
-#sh 310-sardi-mint-y-icons-AUR-repo*
-#sh 320-surfn-mint-y-icons-git-AUR-repo*
 
 sh 500-what*
 
