@@ -2,19 +2,6 @@
 #set -e
 ##################################################################################################################
 # Author    : Erik Dubois
-# Website   : https://www.erikdubois.be
-# Website   : https://www.alci.online
-# Website   : https://www.ariser.eu
-# Website   : https://www.arcolinux.info
-# Website   : https://www.arcolinux.com
-# Website   : https://www.arcolinuxd.com
-# Website   : https://www.arcolinuxb.com
-# Website   : https://www.arcolinuxiso.com
-# Website   : https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
 ##################################################################################################################
 #tput setaf 0 = black
 #tput setaf 1 = red
@@ -51,11 +38,8 @@ if 	lsblk -f | grep btrfs > /dev/null 2>&1 ; then
 	echo	
 	echo "You are using BTRFS. Installing the software ..."
 	echo
-	sudo pacman -S --needed --noconfirm snapper
-	sudo pacman -S --needed --noconfirm grub-btrfs
-	sudo pacman -S --needed --noconfirm btrfs-assistant
-	sudo pacman -S --needed --noconfirm snap-pac
-	sudo pacman -S --needed --noconfirm snapper-support
+	sudo pacman -S --needed --noconfirm snapper grub-btrfs btrfs-assistant snap-pac snapper-support
+
 	echo
 	tput setaf 2
 	echo "################################################################"
