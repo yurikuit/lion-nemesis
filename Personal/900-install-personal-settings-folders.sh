@@ -133,6 +133,7 @@ echo "Installing personal settings of variety"
 cp $installed_dir/settings/variety/variety.conf ~/.config/variety/
 cp -r $installed_dir/settings/variety/Favorites/* ~/.config/variety/Favorites/
 [ -d /etc/skel/.config/variety ] || sudo mkdir -p /etc/skel/.config/variety
+[ -d /etc/skel/.config/variety/Favorites ] || sudo mkdir -p /etc/skel/.config/variety/Favorites
 sudo cp $installed_dir/settings/variety/variety.conf /etc/skel/.config/variety/
 sudo cp -r $installed_dir/settings/variety/Favorites/* /etc/skel/.config/variety/Favorites/
 echo
